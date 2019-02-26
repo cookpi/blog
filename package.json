@@ -1,0 +1,14 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:docs": "vuepress dev docs",
+    "build:docs": "vuepress build docs"
+  },
+  "repository": "https://github.com/cookappsdev/blog.git",
+  "author": "jwkim2 <jwkim2@cookapps.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^0.14.9"
+  }
+}

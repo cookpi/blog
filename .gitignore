@@ -1,3 +1,6 @@
+# docs
+dist/
+
 # common
 .DS_Store
 .thumbs.db
