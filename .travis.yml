@@ -11,7 +11,7 @@ before_script:
 - git config --global user.email 'vuepressbot@cookapps.com'
 - sed -i 's/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/' deploy.sh
 script:
-- bash depoly.sh
+- bash deploy.sh
 notifications:
   email:
     on_success: never
