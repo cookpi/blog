@@ -13,6 +13,13 @@ PUT, GET, POST 호출과 함께 JWT 토큰을 전송하는 내용으로 구성�
 ## 샘플 코드
 ### PUT, GET, POST 구현부
 ```csharp
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Networking;
+using Newtonsoft.Json;
+
 class RestApi
 {
     public RestApi() { }
