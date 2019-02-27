@@ -5,6 +5,10 @@ module.exports = {
       title: 'git',
       children: ['/guide/git/overview', '/guide/git/github']
     },
-    'vscode/'
+    'vscode/',
+    {
+      title: 'unity',
+      children: ['/guide/unity/rest']
+    }
   ]
 }
