@@ -2,12 +2,12 @@
 
 ## 시작하기
 
-C#으로 REST API 호출을 하기 위한 가이드 문서입니다.
-PUT, GET, POST 호출과 하께 JWT 토큰을 전송하는 내용으로 구성되어 있습니다.
+C#으로 REST API 호출을 하기 위한 가이드 문서입니다.<br/>
+PUT, GET, POST 호출과 함께 JWT 토큰을 전송하는 내용으로 구성되어 있습니다.
 
 ## 사전 요구 사항
 ### JSON .NET 설치
-에셋 스토어에 JSON .NET을 설치합니다. 이는 Nested Dictionary를 Json String으로 변환하기 위해 필요합니다.
+에셋스토어에서 JSON.NET을 설치합니다. 이는 Nested Object를 Json String으로 변환하기 위해 필요합니다.
 [JSON.NET 에셋스토어 링크](https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-11347)
 
 ## 샘플 코드
