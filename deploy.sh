@@ -5,4 +5,4 @@ cd dist/docs
 git init
 git add -A
 git commit -m 'deploy via travis'
-git push -f https://__GITHUB_TOKEN__@github.com:cookappsdev/cookappsdev.github.io.git master
+git push -f https://__GITHUB_TOKEN__@github.com/cookappsdev/cookappsdev.github.io.git master
