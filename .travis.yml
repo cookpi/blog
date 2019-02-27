@@ -9,7 +9,7 @@ install:
 before_script:
 - git config --global user.name 'VuePressBot'
 - git config --global user.email 'vuepressbot@cookapps.com'
-- sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" depoly.sh
+- sed 's/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/' depoly.sh
 script:
 - bash depoly.sh
 notifications:
