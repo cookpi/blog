@@ -86,6 +86,11 @@ module.exports = {
 }
 ```
 
+::: tip
+Root README.md 파일은 [Front Matter](https://jekyllrb.com/docs/front-matter/) 방식으로 작성하고 하위 페이지는 [Markdown](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)으로 작성하도록 합니다.<br>
+[Front Matter](https://jekyllrb.com/docs/front-matter/)에 대해 자세히 알아보세요.
+:::
+
 #### 결과 화면
 
 ![result](/screenshot/vuepress_190228.png)
