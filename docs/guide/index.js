@@ -7,8 +7,12 @@ module.exports = {
     },
     'vscode/',
     {
-      title: 'unity',
+      title: 'Unity',
       children: ['/guide/unity/rest']
+    },
+    {
+      title: 'Vue.js',
+      children: ['/guide/vuejs/vuepress']
     }
   ]
 }
