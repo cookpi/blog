@@ -2,6 +2,7 @@
 
 npm run docs:build
 cd dist/docs
+echo "blog.cookapps.io" > CNAME
 git init
 git add -A
 git commit -m 'deploy via travis'

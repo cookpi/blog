@@ -18,7 +18,14 @@ module.exports = {
       { text: 'Cook Dev', link: '/cook-dev/' },
       { text: 'Cheat Sheet', link: '/cheat-sheet/' }
     ],
-    sidebar: createSidebar()
+    sidebar: createSidebar(),
+    // GitHub Edit Setting
+    repo: 'cookappsdev/blog',
+    repoLabel: 'GitHub',
+    docsDir: 'docs',
+    docsBranch: 'master',
+    editLinks: true,
+    editLinkText: 'Edit this page on GitHub'
   },
   dest: 'dist/docs',
   head: [
