@@ -1,4 +1,4 @@
-# VuePress
+# VuePress <Badge text="mhma" />
 
 ## 시작하기
 

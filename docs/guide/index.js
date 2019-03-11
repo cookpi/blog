@@ -1,18 +1,10 @@
 module.exports = {
   '/guide/': [
     '',
-    {
-      title: 'git',
-      children: ['/guide/git/overview', '/guide/git/github']
-    },
-    'vscode/',
+    'vuepress/',
     {
       title: 'Unity',
-      children: ['/guide/unity/rest']
+      children: ['/guide/unity/', '/guide/unity/rest-api']
     },
-    {
-      title: 'Vue.js',
-      children: ['/guide/vuejs/vuepress']
-    }
   ]
 }
