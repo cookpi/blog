@@ -1,4 +1,4 @@
-# Cook Dev
+# Cook Dev <Badge text="jwkim2" />
 
 ## 기술 블로그에 대하여
 

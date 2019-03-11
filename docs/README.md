@@ -3,7 +3,6 @@ home: true
 heroImage: /icons/icon-128x128.png
 actionText: Get Started
 actionLink: /cook-dev/
-
 features:
 - title: Guide
   details: 개발을 하기 위한 기초적인 지식이나 도구 사용법
