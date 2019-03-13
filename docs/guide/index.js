@@ -3,6 +3,7 @@ module.exports = {
     '',
     'vuepress/',
     {
+      collapsable: false,
       title: 'Unity',
       children: ['/guide/unity/', '/guide/unity/rest-api']
     },
