@@ -1,4 +1,4 @@
-# Test Case: Rest API <Badge text="mhma" />
+# Test Case: REST API <Badge text="mhma" />
 
 ## 시작하기
 
