@@ -20,6 +20,8 @@ Git은 어찌 보면 단순히 도구에 불과할 뿐이고 실질적으로 Git
 | Private Repo | **Free**<br>없음<br><br>**Individuals**<br>$7/user/month<br><br>**Teams**<br>$9/user/month<br>Starts at $25 / month and includes your first 5 users<br><br>**Enterprise**<br>$21/user/month<br>Self-hosted or cloud / month and includes your first 5 users | **Free**<br>$0/user/month<br>CI 2000 mins /group/month<br><br>**Bronze**<br>$4/user/month<br>CI 2000 mins /group/month<br><br>**Silver**<br>$19/user/month<br>CI 10,000 mins /group/month<br><br>**Gold**<br>$99/user/month<br>CI 50,000 mins /group/month<br><br> | **Free**<br>$0/user/month<br>Up to 5 users<br>CI 50 mins/month<br><br>**Standard**<br>$2/user/month<br>Start at $10/month<br>CI 500 mins/month<br><br>**Premium**<br>$5/user/month<br>Start at $25/month<br>CI 1000 mins/month<br><br> |
 | Self-hosted  | **Enterprise Plan**<br>$21/user/month | **오픈 소스(무료)** | **유료(라이선스)**<br>$10/up to 10 users<br>$2500/up to 25 users<br>$4500/up to 50 users<br>$8300/up to 100 users<br>$16,500/up to 250 users |
 
+<small>업데이트:GitHub가 최근 개인에 한해서 3명까지 공유할수 있는 무제한 repo 를 제공한다고 합니다.</small>
+
 Git 클라우드 서비스들이 지원하는 내용은 다 비슷비슷하기 때문에 서비스상의 큰 차이는 없습니다. 단, 오픈 소스의 경우 이미 대부분의 오픈 소스 생태계가 GitHub를 중심으로 구축이 되어 있기 때문에 GitHub를 사용해야 합니다. 실질적으로 어떤 Git 서비스를 선택하여야 하나는 이어지는 CI와 함께 알아보도록 하겠습니다.
 
 ## CI/CD
