@@ -1072,7 +1072,7 @@ $ yarn add express-jwt # or npm i express-jwt
 ```js
 // api/v1/auth/login.js
 const express = require('express')
-const jwt = require('jsonwebtoken')()
+const jwt = require('jsonwebtoken')
 
 const router = express.Router()
 
