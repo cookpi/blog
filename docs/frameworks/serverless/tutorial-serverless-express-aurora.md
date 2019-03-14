@@ -1308,6 +1308,16 @@ Invocations가 증가하는 모습을 확인할 수 있습니다.
 
 VSCode를 이용하여 BreakPoint로 디버깅하는 방법에 대해 소개합니다.<br>
 
+#### package.json - scripts에 debug 스크립트를 추가
+
+```javascript
+"scripts": {
+  "dev": "serverless offline start",
+  "deploy": "serverless deploy",
+  "debug": "export SLS_DEBUG=* && node --debug ./node_modules/serverless/bin/serverless offline -s dev"
+}
+```
+
 #### VSCode Left Menu에서 Debug Menu를 선택합니다.
 
 ![](./images/step13-01.png)
