@@ -421,13 +421,13 @@ module.exports = router
 
 수정한 API를 Postman으로 호출해봅니다.
 
-#### ApiError Result
-
-![](./images/step5-api-error.png)
-
 #### Error Result
 
 ![](./images/step5-error.png)
+
+#### ApiError Result
+
+![](./images/step5-api-error.png)
 
 ### Error Tips
 
