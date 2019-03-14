@@ -1187,7 +1187,7 @@ UID를 인자로 전달하고 Token을 발급 받아 이후 API 통신에 인증
 └── yarn.lock
 ```
 
-아래 코드를 daily-events.js에 작성하고 테스트를 위해 ${API-ENDPOINT}를 로컬 환경의 events API를 호출할 수 있게 변경합니다.
+아래 코드를 daily-events.js에 작성합니다.
 
 ```js
 // scheduler/daily-events.js
