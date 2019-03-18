@@ -30,5 +30,6 @@ module.exports = {
   dest: 'dist/docs',
   head: [
     ['link', { rel: 'icon', href: '/icon.png' }]
-  ]
+  ],
+  ga: 'UA-136404297-1'
 }
