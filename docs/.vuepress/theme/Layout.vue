@@ -1,6 +1,6 @@
 <template>
   <Layout ref="layout">
-    <!--<Disqus slot="page-bottom" class="content"/>-->
+    <Disqus slot="page-bottom" class="content"/>
   </Layout>
 </template>
 
