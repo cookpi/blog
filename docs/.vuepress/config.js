@@ -25,11 +25,13 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'master',
     editLinks: true,
-    editLinkText: 'Edit this page on GitHub'
+    editLinkText: 'Edit this page on GitHub',
+    lastUpdated: 'Last Updated'
   },
   dest: 'dist/docs',
   head: [
     ['link', { rel: 'icon', href: '/icon.png' }]
   ],
-  ga: 'UA-136404297-1'
+  ga: 'UA-136404297-1',
+  serviceWorker: true
 }
