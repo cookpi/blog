@@ -421,13 +421,13 @@ module.exports = router
 
 수정한 API를 Postman으로 호출해봅니다.
 
-#### ApiError Result
-
-![](./images/step5-api-error.png)
-
 #### Error Result
 
 ![](./images/step5-error.png)
+
+#### ApiError Result
+
+![](./images/step5-api-error.png)
 
 ### Error Tips
 
@@ -1072,7 +1072,7 @@ $ yarn add express-jwt # or npm i express-jwt
 ```js
 // api/v1/auth/login.js
 const express = require('express')
-const jwt = require('jsonwebtoken')()
+const jwt = require('jsonwebtoken')
 
 const router = express.Router()
 
@@ -1163,8 +1163,6 @@ UID를 인자로 전달하고 Token을 발급 받아 이후 API 통신에 인증
 ```bash
 .
 ├── api
-│   ├── @secret
-│   │   └── index.js
 │   ├── index.js
 │   ├── utils
 │   │   ├── error.js
@@ -1189,19 +1187,22 @@ UID를 인자로 전달하고 Token을 발급 받아 이후 API 통신에 인증
 └── yarn.lock
 ```
 
-아래 코드를 daily-events.js에 작성하고 테스트를 위해 ${API-ENDPOINT}를 로컬 환경의 events API를 호출할 수 있게 변경합니다.
+아래 코드를 daily-events.js에 작성합니다.
 
 ```js
 // scheduler/daily-events.js
-const axios = require('axios')
+const mysql = require('../api/utils/mysql')
 
 exports.handler = async (event, context) => {
-  await axios.post('http://localhost:3000/api/v1/events/api/v1/events', {
-    "title" : "cronevent",
-    "message": "test",
-    "status": "close",
-    "score": 1
-  })
+  try {
+    const title = 'cron_events'
+    const message = new Date().toTimeString()
+    const score = 100
+    const status = 'open'
+    await mysql.query(`INSERT INTO events(title, message, score, status) VALUES ('${title}', '${message}', '${score}', '${status}')`)
+  } catch (error) {
+    console.log(error)
+  }
 }
 ```
 
@@ -1261,23 +1262,9 @@ DB에 데이터를 확인해봅니다.<br>
 
 ![](./images/step12-01.png)
 
-이제 배포를 진행합니다. /scheduler/daily-events.js 의 ${API-URL}을 Lambda Endpoints로 변경합니다.
+yarn deploy를 실행하여 배포를 진행합니다.
 
-```javascript
-// scheduler/daily-events.js
-const axios = require('axios')
-
-exports.handler = async (event, context) => {
-  await axios.post('https://xxx-api.ap-northeast-2.amazonaws.com/prod/api/v1/events', {
-    "title" : "cronevent",
-    "message": "test",
-    "status": "close",
-    "score": 1
-  })
-}
-```
-
-yarn deploy를 입력합니다. 결과 화면에 scheduler가 추가된 것을 확인할 수 있습니다.
+결과 화면에 scheduler가 추가된 것을 확인할 수 있습니다.
 
 ```bash
 $ yarn deploy
@@ -1320,33 +1307,71 @@ Invocations가 증가하는 모습을 확인할 수 있습니다.
 ## (Bonus) Step 13 : BreakPoint
 
 VSCode를 이용하여 BreakPoint로 디버깅하는 방법에 대해 소개합니다.<br>
-package.json에 debug 스크립트를 추가합니다.
+
+#### package.json - scripts에 debug 스크립트를 추가
 
 ```javascript
-{
-  "name": "tutorial-serverless-express-aurora-dev",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/cookappsdev/tutorial-serverless-express-aurora.git",
-  "author": "mani",
-  "license": "MIT",
-  "scripts": {
-    "dev": "serverless offline start",
-    "deploy": "serverless deploy",
-    "debug": "export SLS_DEBUG=* && node --debug ./node_modules/serverless/bin/serverless offline -s dev"   // 추가
-  },
-  "dependencies": {
-    "aws-serverless-express": "^3.3.5",
-    "axios": "^0.18.0",
-    "express": "^4.16.4",
-    "express-jwt": "^5.3.1",
-    "serverless-mysql": "^1.2.1"
-  },
-  "devDependencies": {
-    "serverless": "^1.38.0",
-    "serverless-offline": "^4.9.0",
-    "serverless-offline-scheduler": "^0.3.7"
-  }
+"scripts": {
+  "dev": "serverless offline start",
+  "deploy": "serverless deploy",
+  "debug": "export SLS_DEBUG=* && node --debug ./node_modules/serverless/bin/serverless offline -s dev"
 }
 ```
+
+#### VSCode Left Menu에서 Debug Menu를 선택합니다.
+
+![](./images/step13-01.png)
+
+#### 상단 No Configuration을 누르고 Add Configuration을 선택합니다.
+
+![](./images/step13-02.png)
+
+#### Node.js를 선택하면 laugnch.json 파일이 생성됩니다.
+
+![](./images/step13-03.png)
+
+#### 다음 코드를 launch.json에 작성합니다.
+
+```js
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Serverless",
+      "program": "${workspaceFolder}/node_modules/serverless/bin/serverless",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "offline",
+        "start",
+        "--stage=development",
+        "--region=us-west-2",
+        "--host=localhost",
+        "--port=3000",
+        "--noTimeout"
+      ],
+      "sourceMaps": true,
+      "smartStep": true
+    }
+  ]
+}
+```
+
+![](./images/step13-04.png)
+
+##### 이제 auth/login API를 디버깅해보겠습니다. /api/v1/auth/index.js을 열고 8번 줄 const token 변수에 브레이킹 포인트를 잡습니다. (F9 키 혹은 스크린샷 빨간 점 부분 마우스로 선택)
+
+![](./images/step13-05.png)
+
+#### 왼쪽 상단 DEBUG 버튼을 누르면 Debugging Watch가 시작됩니다.
+
+![](./images/step13-07.png)
+
+#### auth/login API를 호출하여 VSCode에서 디버깅 정보를 확인합니다.
+
+![](./images/step13-08.png)
+
+![](./images/step13-06.png)
+
 
