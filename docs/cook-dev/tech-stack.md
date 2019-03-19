@@ -1,4 +1,4 @@
-# Tech Stack <Badge text="jwkim2" />
+# Tech Stack(기술 스택) <Badge text="jwkim2" />
 
 저희 팀에서 사용하는 기술 스택에 대하여 왜 각 기술들을 선택하였는지에 대하여 설명합니다.
 
