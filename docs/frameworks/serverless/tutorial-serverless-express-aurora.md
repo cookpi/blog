@@ -1,5 +1,7 @@
 # Tutorial: serverless-express-aurora <Badge text="mhma" />
 
+https://github.com/cookpi/tutorial-serverless-express-aurora
+
 ## 소개
 
 - 본 튜토리얼은 Serverless Framework + Express + Aurora 를 사용하여 간단한 REST API를 제작하고 배포하는 내용에 대해 다룹니다.
