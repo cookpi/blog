@@ -32,6 +32,7 @@ module.exports = {
   dest: 'dist/docs',
   head: [
     ['link', { rel: 'icon', href: '/icon.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
     ['meta', { name: 'naver-site-verification', content: '9f6fd9374b76e620a5d27ecde3ad0ce5ff285294' }],
     ['meta', { name: 'google-site-verification', content: 'mE3gNyo5dv_Uw5cyV0Z-aAuOyYphLiu5ejyVAWk-ujE' }]
   ],
