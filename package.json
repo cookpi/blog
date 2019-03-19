@@ -5,7 +5,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "repository": "https://github.com/cookappsdev/blog.git",
+  "repository": "https://github.com/cookpi/blog.git",
   "author": "jwkim2 <jwkim2@cookapps.com>",
   "license": "MIT",
   "devDependencies": {

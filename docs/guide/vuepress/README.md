@@ -36,8 +36,8 @@ $ yarn global add vuepress # OR yarn add vuepress -D
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "repository": "https://github.com/cookappsdev/blog.git",
-  "author": "cookappsdev <cookappsdev@cookapps.com>",
+  "repository": "https://github.com/cookpi/blog.git",
+  "author": "cookpi <cookpi@cookapps.com>",
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^0.14.9"

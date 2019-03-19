@@ -20,7 +20,7 @@ module.exports = {
     ],
     sidebar: createSidebar(),
     // GitHub Edit Setting
-    repo: 'cookappsdev/blog',
+    repo: 'cookpi/blog',
     repoLabel: 'GitHub',
     docsDir: 'docs',
     docsBranch: 'master',
