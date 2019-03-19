@@ -16,7 +16,8 @@ module.exports = {
       { text: 'Guide', link: '/guide/' },
       { text: 'Frameworks', link: '/frameworks/' },
       { text: 'Cook Dev', link: '/cook-dev/' },
-      { text: 'Cheat Sheet', link: '/cheat-sheet/' }
+      { text: 'Cheat Sheet', link: '/cheat-sheet/' },
+      { text: 'Tags', link: '/tags/' }
     ],
     sidebar: createSidebar(),
     // GitHub Edit Setting

@@ -1,3 +1,7 @@
+---
+tags: ["docs", "vuepress"]
+---
+
 # VuePress <Badge text="mhma" />
 
 ## 시작하기

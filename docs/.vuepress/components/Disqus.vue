@@ -1,6 +1,7 @@
 <template>
-  <div id="disqus_thread"></div>
+  <div id="disqus_thread" style="padding-top: 0px;"></div>
 </template>
+
 <script>
   export default {
     mounted() {
