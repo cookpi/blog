@@ -17,7 +17,8 @@ module.exports = {
       { text: 'Frameworks', link: '/frameworks/' },
       { text: 'Cook Dev', link: '/cook-dev/' },
       { text: 'Cheat Sheet', link: '/cheat-sheet/' },
-      { text: 'Tags', link: '/tags/' }
+      { text: 'Tags', link: '/tags/' },
+      { text: 'Jobs', link: 'https://www.cookapps.com/jobs' }
     ],
     sidebar: createSidebar(),
     // GitHub Edit Setting
