@@ -1,6 +1,6 @@
 # REST API <Badge text="jwkim2" />
 
-<small style="color: gray;">뒤에 이어질 [Tutorial: serverless-express-aurora](/frameworks/serverless/tutorial-serverless-express-aurora.html)를 위하여 REST API 에 대하여 잠시 설명합니다. 본 포스팅은 차후 API 카테고리로 이전 예정입니다.</small>
+<div class="small">뒤에 이어질 [Tutorial: serverless-express-aurora](/frameworks/serverless/tutorial-serverless-express-aurora.html)를 위하여 REST API 에 대하여 잠시 설명합니다. 본 포스팅은 차후 API 카테고리로 이전 예정입니다.</div>
 
 ## REST API란?
 
@@ -92,7 +92,7 @@ REST API 의 URL의 끝에 ID가 붙는지 안붙는지에 따라서 크게 두�
 * 슬래시(/)는 계층 관계
 * Stateless(무상태성): API 자체는 상태를 가지지 않음. Cookie, Session 등을 사용하지 않고 단순이 들어오는 요청값에 의해서만 처리하여 구현이 단순해 짐. 인증은 JWT를 사용하고 상태가 필요한 정보는 DB에 질의 함
 
-<small>예외: 자원이 대상이 아닌 인증등의 행위에 대해서는 동사를 허락하고 POST 방식을 사용(Web Form 과 동일)</small>
+<div class="small">예외: 자원이 대상이 아닌 인증등의 행위에 대해서는 동사를 허락하고 POST 방식을 사용(Web Form 과 동일)</div>
 
 #### HTTP Method
 

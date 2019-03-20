@@ -1,8 +1,8 @@
 module.exports = {
   '/cook-dev/': [
     '',
-    'overview',
-    'tech-stack',
-    'architecture'
+    'overview/',
+    'tech-stack/',
+    'architecture/'
   ]
 }

@@ -24,7 +24,7 @@ Git은 어찌 보면 단순히 도구에 불과할 뿐이고 실질적으로 Git
 | Private Repo | **Free**<br>없음<br><br>**Individuals**<br>$7/user/month<br><br>**Teams**<br>$9/user/month<br>Starts at $25 / month and includes your first 5 users<br><br>**Enterprise**<br>$21/user/month<br>Self-hosted or cloud / month and includes your first 5 users | **Free**<br>$0/user/month<br>CI 2000 mins /group/month<br><br>**Bronze**<br>$4/user/month<br>CI 2000 mins /group/month<br><br>**Silver**<br>$19/user/month<br>CI 10,000 mins /group/month<br><br>**Gold**<br>$99/user/month<br>CI 50,000 mins /group/month<br><br> | **Free**<br>$0/user/month<br>Up to 5 users<br>CI 50 mins/month<br><br>**Standard**<br>$2/user/month<br>Start at $10/month<br>CI 500 mins/month<br><br>**Premium**<br>$5/user/month<br>Start at $25/month<br>CI 1000 mins/month<br><br> |
 | Self-hosted  | **Enterprise Plan**<br>$21/user/month | **오픈 소스(무료)** | **유료(라이선스)**<br>$10/up to 10 users<br>$2500/up to 25 users<br>$4500/up to 50 users<br>$8300/up to 100 users<br>$16,500/up to 250 users |
 
-<small>업데이트:GitHub가 최근 개인에 한해서 3명까지 공유할수 있는 무제한 repo 를 제공한다고 합니다.</small>
+<div class="small">업데이트:GitHub가 최근 개인에 한해서 3명까지 공유할수 있는 무제한 repo 를 제공한다고 합니다.</div>
 
 Git 클라우드 서비스들이 지원하는 내용은 다 비슷비슷하기 때문에 서비스상의 큰 차이는 없습니다. 단, 오픈 소스의 경우 이미 대부분의 오픈 소스 생태계가 GitHub를 중심으로 구축이 되어 있기 때문에 GitHub를 사용해야 합니다. 실질적으로 어떤 Git 서비스를 선택하여야 하나는 이어지는 CI와 함께 알아보도록 하겠습니다.
 
@@ -69,7 +69,7 @@ CI 라는 것이 사실 특정 서비스에 종속적인 것은 아니나 각 Gi
 | 가격      | **무료**<br>오픈소스만 해당<br><br>**Bootstrap**<br>$69/month<br>1 Concurrent job<br><br>**Startup**<br>$129/month<br>2 Concurrent job<br><br>**Small Business**<br>$249/month<br>5 Concurrent job<br><br>**Premium**<br>$489/month<br>10 Concurrent job<br><br> | Plan별 기본 제공 시간 + <br>Self hosted CI Runner(무료) | Plan별 기본 제공 시간 + <br>$10/month for 1000 mins | 설치형으로 빌드에 따른 비용이 없고 직접 호스팅하는 비용 |
 | Self Hosting | 불가 | 가능 | 불가 | 가능 |
 
-<small>Butbucket 의 Self Hosting CI Bamboo 는 제외하였습니다.</small>
+<div class="small">Butbucket 의 Self Hosting CI Bamboo 는 제외하였습니다.</div>
 
 CI 서비스 또한 Git 서비스들처럼 큰 차이를 가지고 있지는 않습니다만 약간의 서로 다른 특징들을 보유하고 있습니다.
 
@@ -120,7 +120,7 @@ Private Repo 가 인원이 늘어나도 무료이기 때문에 비용 부담이 
 오픈 소스와 사내 프로젝트를 한 곳에서 관리하기 용이합니다.("우리 회사는 오픈 소스 안만드는데?" 제발 좀 만드세요. 지금 당신이 쓰고 있는 모든 오픈 소스가 이런 노력으로 만들어진 것입니다.)<br>
 일반 회사에서 인당 $9 는 직접 인프라를 구축하고 관리하는 비용과 안정성을 생각하면 오히려 저렴하다고도 볼 수 있습니다. Travis 의 경우는 시작이 월 $69라 작은 회사의 부담이 될수도 있지만 iOS 빌드를 위한 맥 구매 비용과 감가상각 및 안정성을 생각하면 큰 차이가 나지 않습니다. 규모가 있는 회사면 사용량에 맞는 Travis Plan 을 이용하면 됩니다.
 
-가격 편향적이긴 한데, 현재 Git 및 CI 서비스들이 대부분 큰 차이 없이 잘 되어 있어 굳이 따지자면 가성비를 들 수 밖에 없습니다.(가심비로는 GitHub 입니다.^^;) 생태계 호환성을 보았을때는 GitHub > 넘사벽 > BitBucket > GitLab 순이긴 한데 CI 통해 우회가 가능하기 때문에 어느 서비스를 선택하여도 사용하는 입장에서 큰 문제는 없습니다.(예를 들면, AWS에서 Lambda 배포를 공식적으로 GitHub만 지원하나 CI를 통해서 GitLab, BitBucket 에서도 배포 할 수 있습니다. <small>- 이 글을 읽는 시점에서 BitBucket 을 지원하고 있을 수도 있습니다. 그런 건 중요한 부분이 아니니 넘어 갑시다.-</small>)
+가격 편향적이긴 한데, 현재 Git 및 CI 서비스들이 대부분 큰 차이 없이 잘 되어 있어 굳이 따지자면 가성비를 들 수 밖에 없습니다.(가심비로는 GitHub 입니다.^^;) 생태계 호환성을 보았을때는 GitHub > 넘사벽 > BitBucket > GitLab 순이긴 한데 CI 통해 우회가 가능하기 때문에 어느 서비스를 선택하여도 사용하는 입장에서 큰 문제는 없습니다.(예를 들면, AWS에서 Lambda 배포를 공식적으로 GitHub만 지원하나 CI를 통해서 GitLab, BitBucket 에서도 배포 할 수 있습니다. <span class="small">- 이 글을 읽는 시점에서 BitBucket 을 지원하고 있을 수도 있습니다. 그런 건 중요한 부분이 아니니 넘어 갑시다.-</span>)
 
 ::: tip
 CI를 제대로 사용하기 위해서는 Docker에 대한 이해와 활용이 필수 입니다.
@@ -132,8 +132,8 @@ CI를 제대로 사용하기 위해서는 Docker에 대한 이해와 활용이 �
 
 단순히 언어 차원에서 비교하는 것은 큰 의미는 없지만, 재미 삼아 구글 트렌드를 확인해 보았습니다.
 
-![google-trend-language](./img/google-trend-language.png)
-<small>출처: google trend 캡처</small>
+![google-trend-language](../_img/google-trend-language.png)
+<div class="small">출처: google trend 캡처</div>
 
 현재 JavaScript 가 1위를 하고 있고, Java > Python > PHP 순입니다. 처음에는 Java 세상이었다가 2016년도를 기점으로 JavaScript 가 역전하였고 부동의 1위를 지키고 있습니다. PHP는 현재 Python 보다도 못합니다.
 
@@ -152,8 +152,8 @@ PHP는 미래가 없기 앞으로 언급하지 않을 예정입니다. PHP는 �
 
 다음은 [StackShare](https://stackshare.io)에서 3가지 프레임워크를 비교한 일부 화면입니다.
 
-![node-spring-django](./img/node-spring-django.png)
-<small>출처: StackShare 캡처</small>
+![node-spring-django](../_img/node-spring-django.png)
+<div class="small">출처: StackShare 캡처</div>
 
 Node가 압도적으로 많이 사용되고 있습니다. Node가 왜 많이 사용되는지가 저희가 Node 를 선택한 이유이기 때문에 각 프레임워크의 장단점 보다는 Node 에 대한 설명을 추가로 하겠습니다.
 
@@ -265,7 +265,7 @@ Firebase 는 프로젝트를 생성하면 해당 프로젝트에서 필요한 �
 
 DynamoDB(AWS)와 Firestore(Firebase)를 비교해보자면, DynamoDB의 경우 일일이 테이블을 생성하고 키를 잡아주고 해야 하지만 Firestore 경우 데이터 추가시 테이블이 자동으로 생성되며 기본적으로 모든 필드에 키가 자동으로 잡히고 복합 인덱스의 경우도 개발자가 설정하지 않아도 실시간으로 원클릭으로 설정이 가능한 링크를 알려줍니다. DynamoDB 도 Cognito 와 인증을을 지원하지만 Firestore의 경우는 Rules라는  별도의 파일을 통해 쉽고 직관적이게 컨트롤 할수 있도록 추상화를 해 놓았습니다.
 
-또한 Firebase SDK 를 보면 모던(Modern)한 방식으로 제작되어 있다는 것을 알 수 있습니다. AWS는 SDK 아직도 기본적으로 Promise(또는 async/await)를 기본적으로 지원하지 않은 경우가 있어 일일이 Promise 를 호출 해주거나 별도의 랩퍼 클래스를 만들어야 하는데, Firebase SDK 는 모든 SDK 가 Promise 를 기본 지원합니다. 단순히 Promise 뿐 아니라 Web 상에서 Bundling 에 대한 모듈 마이크로화등 다양한 부분에서 서비스를 나중에 시작한 Firebase 가 AWS 보다는 더 모던한 개발 방식 및 내용을 취하고 있습니다. 물론 서비스를 오래 지속해온 AWS 입장에서 기존 SDK 방식의 변경등은 리스크가 있는 것이 분명하나 그걸 감안한다 하더라도 시대를 못따라가고  있다고 생각합니다.(오해가 있을가바 첨언하면 AWS 가 기술적인 부분에서는 시대를 선도하는 부분이 많으나 개발의 편의성 및 생산성에 대해서는 동의하기 힘듭니다.<small>추가: 모던하다는 것을 한두가지 사례로 단순 비교해서 설명하기는 조금 힘듭니다. 차후 구체적인 많은 사례를 들어야 보강 예정입니다.</small>)
+또한 Firebase SDK 를 보면 모던(Modern)한 방식으로 제작되어 있다는 것을 알 수 있습니다. AWS는 SDK 아직도 기본적으로 Promise(또는 async/await)를 기본적으로 지원하지 않은 경우가 있어 일일이 Promise 를 호출 해주거나 별도의 랩퍼 클래스를 만들어야 하는데, Firebase SDK 는 모든 SDK 가 Promise 를 기본 지원합니다. 단순히 Promise 뿐 아니라 Web 상에서 Bundling 에 대한 모듈 마이크로화등 다양한 부분에서 서비스를 나중에 시작한 Firebase 가 AWS 보다는 더 모던한 개발 방식 및 내용을 취하고 있습니다. 물론 서비스를 오래 지속해온 AWS 입장에서 기존 SDK 방식의 변경등은 리스크가 있는 것이 분명하나 그걸 감안한다 하더라도 시대를 못따라가고  있다고 생각합니다.(오해가 있을가바 첨언하면 AWS 가 기술적인 부분에서는 시대를 선도하는 부분이 많으나 개발의 편의성 및 생산성에 대해서는 동의하기 힘듭니다.<span class="small">추가: 모던하다는 것을 한두가지 사례로 단순 비교해서 설명하기는 조금 힘듭니다. 차후 구체적인 많은 사례를 들어야 보강 예정입니다.</span>)
 
 **AWS는 더 많은 기능을 지원합니다.**<br>
 Firebase 는 기본적으로 필수적인 서비스만 보유하고 있기에 AWS의 광대한 서비스 블록들과 비교 할 수가 없습니다. 본 블로그는 계속 게임을 주로 다루고 있기 때문에 게임쪽에서 사용하는 기술을 보자고 하면 대표적으로 GameLift가 될 수 있습니다. GameLift 는 실시간 PvP를 위한 기술로써 Dedicate 서버를 통한 짧은 지연 시간과 안정성을 보장합니다. 이런 특수한 기술들은 Firebase 에서는 지원하지 않습니다.

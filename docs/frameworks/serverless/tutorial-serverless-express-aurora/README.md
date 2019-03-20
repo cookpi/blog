@@ -171,7 +171,7 @@ $ yarn dev
 
 #### 실행 결과
 
-![step3-01](./images/step3-01.png)
+![step3-01](../_img/step3-01.png)
 
 ## Step 4 : REST Prototype
 
@@ -290,35 +290,35 @@ Postman으로 각 URI에 대한 테스트를 진행합니다.
 
 ### GET Result
 
-![](./images/step4-get.png)
+![](../_img/step4-get.png)
 
 ### GET By UID
 
-![](./images/step4-get-uid.png)
+![](../_img/step4-get-uid.png)
 
 ### POST Result
 
-![](./images/step4-post.png)
+![](../_img/step4-post.png)
 
 ### POST By UID
 
-![](./images/step4-post-uid.png)
+![](../_img/step4-post-uid.png)
 
 ### PUT Result
 
-![](./images/step4-put.png)
+![](../_img/step4-put.png)
 
 ### PUT By UID Result
 
-![](./images/step4-put-uid.png)
+![](../_img/step4-put-uid.png)
 
 ### DELETE Result
 
-![](./images/step4-delete.png)
+![](../_img/step4-delete.png)
 
 ### DELETE By UID Result
 
-![](./images/step4-delete-uid.png)
+![](../_img/step4-delete-uid.png)
 
 ## Step 5 : Error Handling
 
@@ -425,11 +425,11 @@ module.exports = router
 
 #### Error Result
 
-![](./images/step5-error.png)
+![](../_img/step5-error.png)
 
 #### ApiError Result
 
-![](./images/step5-api-error.png)
+![](../_img/step5-api-error.png)
 
 ### Error Tips
 
@@ -441,7 +441,7 @@ Error Handler에 정상적으로 예외를 처리하기 위해선 next()를 호�
 
 Database 연결을 위해 Amazon RDS 서비스에서 Aurora DB를 생성합니다.
 
-![](./images/step6-create.png)
+![](../_img/step6-create.png)
 
 DB 연결을 위한 모듈을 작성합니다. /api/utils 에 다음 파일들을 생성하고 코드를 작성합니다.
 
@@ -540,9 +540,9 @@ module.exports = router
 
 새로 추가된 /api/v1/setup 라우트 메소드를 호출하여 정상적으로 결과가 나오는지 확인합니다.
 
-![](./images/step6-create-table.png)
+![](../_img/step6-create-table.png)
 
-![](./images/step6-result.png)
+![](../_img/step6-result.png)
 
 ## Step 7 : User CRUD
 
@@ -614,19 +614,19 @@ module.exports = router
 
 #### Test Case 1 - Post User
 
-![](./images/step7-post-user.png)
+![](../_img/step7-post-user.png)
 
 #### Test Case 2 - Put User
 
-![](./images/step7-put-user.png)
+![](../_img/step7-put-user.png)
 
 #### Test Case 3 - Get Users
 
-![](./images/step7-get-user.png)
+![](../_img/step7-get-user.png)
 
 #### Test Case 3 - Get User Info
 
-![](./images/step7-get-user-uid.png)
+![](../_img/step7-get-user-uid.png)
 
 ## Step 8 : Extract, Filter, Sort, Pagination
 
@@ -755,49 +755,49 @@ module.exports = router
 
 ##### event1-open
 
-![](./images/step8-01.png)
+![](../_img/step8-01.png)
 
 ##### event2-close
 
-![](./images/step8-02.png)
+![](../_img/step8-02.png)
 
 ##### event3-open
 
-![](./images/step8-03.png)
+![](../_img/step8-03.png)
 
 #### Test Case 2 - Extract
 
 ##### 모든 유저 반환
 
-![](./images/step8-get-users.png)
+![](../_img/step8-get-users.png)
 
 #####  유저 리스트에서 id, title 필드만 추출
 
-![](./images/step8-extract.png)
+![](../_img/step8-extract.png)
 
 ##### 유저 리스트에서 status가 open인 유저만 추출
 
-![](./images/step8-status-open.png)
+![](../_img/step8-status-open.png)
 
 ##### 유저 리스트에서 id가 3보다 작은 그룹 (lt:3)
 
-![](./images/step8-user-lt.png)
+![](../_img/step8-user-lt.png)
 
 ##### 유저 리스트에서 id가 2와 3을 포함하는 그룹 (in:2:3)
 
-![](./images/step8-user-in.png)
+![](../_img/step8-user-in.png)
 
 #### Test Case 3 - Sort
 
 #####  유저 리스트에서 score 순으로 정렬
 
-![](./images/step8-sort.png)
+![](../_img/step8-sort.png)
 
 #### Test Case 4 - Pagination
 
 ##### 유저 리스트 1번째 row를 시작으로 2개 선택
 
-![](./images/step8-page.png)
+![](../_img/step8-page.png)
 
 ## Step 9 : Nested Route
 
@@ -896,15 +896,15 @@ module.exports = router
 
 #### Test Case 1 - Post Items. 같은 방법으로 item2, item3 까지 만들어 줍니다.
 
-![](./images/step9-post-item.png)
+![](../_img/step9-post-item.png)
 
 #### Test Case 2 - Get All Items
 
-![](./images/step9-get-items.png)
+![](../_img/step9-get-items.png)
 
 #### Test Case 3 - Get Item Info
 
-![](./images/step9-get-item-info.png)
+![](../_img/step9-get-item-info.png)
 
 ## Step 10 : Deploy
 
@@ -916,40 +916,40 @@ module.exports = router
 
 먼저 신규 IAM 사용자를 위한 그룹을 생성합니다.
 
-![](./images/step10-01.png)
+![](../_img/step10-01.png)
 
 그룹 이름을 설정합니다
 
-![](./images/step10-02.png)
+![](../_img/step10-02.png)
 
 **정책 연결 시 필요한 권한만 선택해야 하나 튜토리얼 편의상 전체 권한인 AdministratorAccess를 부여했습니다.<br>실 서비스 사용시엔 필요한 권한만 선택하세요**
 
-![](./images/step10-03.png)
+![](../_img/step10-03.png)
 
 그룹 생성을 완료합니다
 
-![](./images/step10-04.png)
+![](../_img/step10-04.png)
 
 이제 배포에 사용될 사용자 계정을 생성합니다.
 
-![](./images/step10-10.png)
+![](../_img/step10-10.png)
 
 **사용자 이름을 지정하고 프로그래밍 방식 엑세스를 선택합니다.<br>
 해당 IAM은 console 명령어를 사용하지 않으므로 AWS Management Console 엑세스는 선택하지 않습니다**
 
-![](./images/step10-11.png)
+![](../_img/step10-11.png)
 
 앞에서 만들어둔 그룹에 해당 사용자를 추가합니다.
 
-![](./images/step10-12.png)
+![](../_img/step10-12.png)
 
 태그는 설정하지 않고 다음으로 이동 후 사용자 만들기를 선택합니다.
 
-![](./images/step10-13.png)
+![](../_img/step10-13.png)
 
 **엑세스 키 ID 및 비밀 엑세스 키를 메모장에 붙여둡니다.<br>
 비밀 엑세스키는 이 단계가 넘어가면 재 확인이 불가능하나 신규 생성으로 재발급 가능하니 반드시 기억할 필요는 없습니다**
-![](./images/step10-14.png)
+![](../_img/step10-14.png)
 
 ### 사전 준비 - Serverless Auth
 
@@ -1010,29 +1010,29 @@ layers:
 
 #### 배포 후 생성 확인 - CloudFormation
 
-![](./images/step10-formation.png)
+![](../_img/step10-formation.png)
 
 #### 배포 후 생성 확인 - API Gateway
 
-![](./images/step10-gateway-01.png)
+![](../_img/step10-gateway-01.png)
 
-![](./images/step10-gateway-02.png)
+![](../_img/step10-gateway-02.png)
 
 #### 배포 후 생성 확인 - Lambda
 
-![](./images/step10-lambda-01.png)
+![](../_img/step10-lambda-01.png)
 
-![](./images/step10-lambda-02.png)
+![](../_img/step10-lambda-02.png)
 
 ### Test Case - Lambda Endpoints 테스트
 
 ##### Endpoints로 API를 호출합니다. Endpoints 확인을 위해 AWS Lambda 서비스 페이지에서 API Gateway를 선택합니다
 
-![](./images/step10-endpoints.png)
+![](../_img/step10-endpoints.png)
 
 #####  테스트 삼아 마지막에 로컬에서 테스트한 API의 Endpoint를 변경하여 호출해봅니다.
 
-![](./images/step10-endpoints-test.png)
+![](../_img/step10-endpoints-test.png)
 
 ## (Bonus) Step 11 : JWT Token을 이용한 간단한 인증처리
 
@@ -1142,20 +1142,20 @@ exports.handler = (event, context) => awsServerlessExpress.proxy(server, event, 
 UID를 인자로 전달하고 Token을 발급 받아 이후 API 통신에 인증 키로 활용될 수 있습니다.<br>
 <b>경고: 실무에서는 User의 실질적인 인증정보(ID,PWD 또는 OAuth등을 활용하여야 합니다.</b>
 
-![](./images/step11-jwt.png)
+![](../_img/step11-jwt.png)
 
 위에서 얻은 Token으로 users PUT Methods를 호출해봅니다.<br>
 우선 Token이 없을 때의 결과 입니다.<br>
 
-![](./images/step11-test-01.png)
+![](../_img/step11-test-01.png)
 
 이제 토큰 값을 추가하여 호출합니다. Postman의 Authorization 탭을 선택한 후 TYPE을 Bearer Token으로 지정합니다. 그리고 Token 입력 폼에 발급 받은 Token 값을 입력한 후 Preview Requests를 눌러 헤더 값을 설정 합니다.<br>
 
-![](./images/step11-test-02.png)
+![](../_img/step11-test-02.png)
 
 이제 users PUT method를 호출합니다. mamh UID의 level을 70으로 변경합니다.<br>
 
-![](./images/step11-test-03.png)
+![](../_img/step11-test-03.png)
 
 ## (Bonus) Step 12 : Cron
 
@@ -1262,7 +1262,7 @@ Serverless: scheduler: running scheduled job: scheduler
 
 DB에 데이터를 확인해봅니다.<br>
 
-![](./images/step12-01.png)
+![](../_img/step12-01.png)
 
 yarn deploy를 실행하여 배포를 진행합니다.
 
@@ -1304,7 +1304,7 @@ Serverless: Removing old service artifacts from S3...
 AWS Lambda 서비스 페이지에서 모니터링 탭을 선택하여 제대로 호출되고 있는지 확인합니다.<br>
 Invocations가 증가하는 모습을 확인할 수 있습니다.
 
-![](./images/step12-02.png)
+![](../_img/step12-02.png)
 
 ## (Bonus) Step 13 : BreakPoint
 
@@ -1322,15 +1322,15 @@ VSCode를 이용하여 BreakPoint로 디버깅하는 방법에 대해 소개합�
 
 #### VSCode Left Menu에서 Debug Menu를 선택합니다.
 
-![](./images/step13-01.png)
+![](../_img/step13-01.png)
 
 #### 상단 No Configuration을 누르고 Add Configuration을 선택합니다.
 
-![](./images/step13-02.png)
+![](../_img/step13-02.png)
 
 #### Node.js를 선택하면 laugnch.json 파일이 생성됩니다.
 
-![](./images/step13-03.png)
+![](../_img/step13-03.png)
 
 #### 다음 코드를 launch.json에 작성합니다.
 
@@ -1360,20 +1360,20 @@ VSCode를 이용하여 BreakPoint로 디버깅하는 방법에 대해 소개합�
 }
 ```
 
-![](./images/step13-04.png)
+![](../_img/step13-04.png)
 
 ##### 이제 auth/login API를 디버깅해보겠습니다. /api/v1/auth/index.js을 열고 8번 줄 const token 변수에 브레이킹 포인트를 잡습니다. (F9 키 혹은 스크린샷 빨간 점 부분 마우스로 선택)
 
-![](./images/step13-05.png)
+![](../_img/step13-05.png)
 
 #### 왼쪽 상단 DEBUG 버튼을 누르면 Debugging Watch가 시작됩니다.
 
-![](./images/step13-07.png)
+![](../_img/step13-07.png)
 
 #### auth/login API를 호출하여 VSCode에서 디버깅 정보를 확인합니다.
 
-![](./images/step13-08.png)
+![](../_img/step13-08.png)
 
-![](./images/step13-06.png)
+![](../_img/step13-06.png)
 
 

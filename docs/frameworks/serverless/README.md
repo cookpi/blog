@@ -11,7 +11,7 @@ Serverless라고 하면 물리(또는 가상화된) 서버를 직접 운영하�
 > The open-source, application framework to easily build serverless architectures on AWS Lambda & more. Startups and Fortune 500 companies are using it to build incredibly efficient applications.<br><br>
 > 오픈소스이며, 쉽게 서버리스 아키텍쳐를 AWS의 Lambda 및 다른 클라우드 서비스에서 빌드할 수 있는 어플리케이션 프레임워크이다. 스타트업과 포춘지 500여개의 회사가 효율적인 어플리케이션 빌딩에 사용하고 있다.
 
-<small>출처: https://serverless.com</small>
+<div class="small">출처: https://serverless.com</div>
 
 EA, 코카콜라, 익스피디아 등등 굴지의 다양한 기업들이 많이 사용하고 있는데 의외로 모르는 개발자도 많습니다. (AWS등을 쓰기 편하게 만들어 놓은 것인데 정작 AWS 직원과 만나서 물어보니 몰랐었습니다. ^^;)
 

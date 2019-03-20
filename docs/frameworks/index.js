@@ -4,7 +4,7 @@ module.exports = {
     {
       collapsable: false,
       title: 'Serverless',
-      children: ['/frameworks/serverless/', '/frameworks/serverless/rest-api', '/frameworks/serverless/tutorial-serverless-express-aurora']
+      children: ['/frameworks/serverless/', '/frameworks/serverless/rest-api/', '/frameworks/serverless/tutorial-serverless-express-aurora/']
     },
     {
       collapsable: true,

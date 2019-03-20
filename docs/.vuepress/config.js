@@ -37,6 +37,11 @@ module.exports = {
     ['meta', { name: 'naver-site-verification', content: '9f6fd9374b76e620a5d27ecde3ad0ce5ff285294' }],
     ['meta', { name: 'google-site-verification', content: 'mE3gNyo5dv_Uw5cyV0Z-aAuOyYphLiu5ejyVAWk-ujE' }]
   ],
-  ga: 'UA-136404297-1',
-  serviceWorker: true
+  serviceWorker: {
+    updatePopup: true
+  },
+  markdown: {
+    lineNumbers: true
+  },
+  ga: 'UA-136404297-1'
 }
