@@ -1,7 +1,7 @@
 ---
 tags: ['vscode', 'ide']
 ---
-# vscode
+# VS Code
 
 ## 왜 VS Code 를 사용하나요?
 
