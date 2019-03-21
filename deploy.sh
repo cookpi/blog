@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-npm run docs:build
+npm run build
 cd dist/docs
 echo "blog.cookapps.io" > CNAME
 git init
