@@ -6,13 +6,18 @@ branches:
   - master
 install:
 - npm install
-before_script:
+script:
+- npm run build
+- cd dist/docs
+- echo "blog.cookapps.io" > CNAME
 - git config --global user.name 'VuePressBot'
 - git config --global user.email 'vuepressbot@cookapps.com'
-- sed -i 's/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/' deploy.sh
-script:
-- bash deploy.sh
+- git init
+- git add -A
+- git commit -m 'deploy via travis'
+- git push -f https://${__GITHUB_TOKEN__}@github.com/cookpi/cookpi.github.io.git master
 notifications:
   email:
     on_success: never
     on_failure: always
+
