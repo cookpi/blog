@@ -1,6 +1,7 @@
 module.exports = {
   '/guide/': [
     '',
+    'vscode/',
     'vuepress/',
     {
       collapsable: false,
