@@ -11,6 +11,9 @@ const createSidebar = () => {
 module.exports = {
   title: 'CookApps 기술 블로그',
   description: 'sandbox 팀에서 운영하는 기술 블로그입니다.',
+  locales: {
+    '/': { lang: 'ko-KR' }
+  },
   themeConfig: {
     nav: [
       { text: 'Guide', link: '/guide/' },
@@ -37,11 +40,7 @@ module.exports = {
     ['meta', { name: 'naver-site-verification', content: '9f6fd9374b76e620a5d27ecde3ad0ce5ff285294' }],
     ['meta', { name: 'google-site-verification', content: 'mE3gNyo5dv_Uw5cyV0Z-aAuOyYphLiu5ejyVAWk-ujE' }]
   ],
-  serviceWorker: {
-    updatePopup: true
-  },
-  markdown: {
-    lineNumbers: true
-  },
+  serviceWorker: { updatePopup: true },
+  markdown: { lineNumbers: true },
   ga: 'UA-136404297-1'
 }
