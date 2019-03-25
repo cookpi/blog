@@ -57,6 +57,9 @@ husky가 githook 을 덮어쓰기 때문에 husky 설정 이전에 repo를 먼�
 }
 ```
 
+* husky: commit-msg 라는 git hook이 실행되면 commitlint를 실행합니다.
+* commitlint: commitlint에서 제공하는 commitlint/config-conventional를 상속(확장)합니다.
+
 ## 사용법
 
 기본적으로 Conventional Commits은 SemVer를 따르기 때문에 MAGER.MINOR.PATCH 에 해당하는 type을 사용하고 나머지는 Version 을 올리지 않습니다.
