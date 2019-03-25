@@ -9,7 +9,7 @@ const createSidebar = () => {
 }
 
 module.exports = {
-  title: 'CookApps 기술 블로그',
+  title: '쿡앱스 기술 블로그',
   description: 'sandbox 팀에서 운영하는 기술 블로그입니다.',
   locales: {
     '/': { lang: 'ko-KR' }
