@@ -97,4 +97,4 @@ Root README.md 파일은 [Front Matter](https://jekyllrb.com/docs/front-matter/)
 
 #### 결과 화면
 
-![result](/screenshot/vuepress_190228.png)
+![result](./_img/vuepress_190228.png)
