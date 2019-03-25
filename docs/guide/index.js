@@ -4,7 +4,8 @@ module.exports = {
     'conventions/',
     'vscode/',
     'git/',
-    'repo/',
+    'editorconfig/',
+    'conventional-commits/',
     'monorepo/',
     'vuepress/',
     {
