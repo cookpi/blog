@@ -1,12 +1,14 @@
 ---
 meta:
   - name: description
-    content: husky 와 commitlint를 활용하여 Conventional Commits 설정법에 대하여 설명합니다.
+    content: husky 와 commitlint를 활용하여 Conventional Commits 설정하고 CHANGELOG를 자동화하는 방법입니다.
   - name: keywords
-    content: 쿡앱스 cookapps scm git conventional comit husky commitlint code 코딩 컨벤션
+    content: 쿡앱스 cookapps git conventional comit husky commitlint semver changelog 자동화
 ---
 
 # Conventional Commits
+
+본 포스팅의 완성 된 [예제 소스](https://github.com/cookpi/example-conventional-commits.git)는 GitHub에 올려져 있습니다.
 
 ## 개요
 
@@ -37,8 +39,10 @@ husky가 githook 을 덮어쓰기 때문에 husky 설정 이전에 repo를 먼�
 // package.json
 {
   "name": "test-conventionalcommits",
-  "description": "test-conventionalcommits",
-  "private": true,
+  "description": "example-conventional-commits",
+  "version": "1.0.0",
+  "author": "jwkim2 <jwkim2@cookapps.com>",
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "@commitlint/config-conventional": "^7.5.0",
@@ -62,9 +66,7 @@ husky가 githook 을 덮어쓰기 때문에 husky 설정 이전에 repo를 먼�
 
 ## 사용법
 
-기본적으로 Conventional Commits은 SemVer를 따르기 때문에 MAGER.MINOR.PATCH 에 해당하는 type을 사용하고 나머지는 Version 을 올리지 않습니다.
-
-다음과 같은 형식으로 commit을 합니다. description 작성시 동사를 현재형으로 사용합니다.
+다음과 같은 형식으로 commit을 합니다.
 
 ```
 <type>[optional scope]: <description>
@@ -93,4 +95,50 @@ feat(auth): add Google Play Auth
 
 형식에 맞지 않는 commit message 를 사용할 경우 commit이 실패 합니다.
 
-버전은 차후 [Lerna](https://lernajs.io/)를 통해 자동으로 올라갑니다.
+Conventional Commits은 SemVer를 따르기 때문에 MAGER.MINOR.PATCH 에 해당하는 type을 사용하면 차후 release 할때 자동으로 해당 하는 버전이 올라가고 나머지는 버전을 올라가지 않습니다.
+
+## CHANGELOG 자동화
+
+git에 commit된 내용을 바탕으로 버저닝과 CHANGELOG.md를 자동으로 생성하는 방법입니다. 기본적인 원리는 단순히 git에 commit 된 로그를 뒤져서 package.json 에 새로운 버전을 명시하고 CHANGELOG.md에 해당 내용을 추가하는 방식입니다. 위에 설정한 husky와 commitlint와 직접적인 의존성이 존재하지 않습니다. 직접 git hook 과 git command 를 이용하여 구현도 가능합니다만 이미 다양한 npm 패키지들이 있고 저희는 [standard-version](https://www.npmjs.com/package/standard-version)이라는 npm 모듈을 사용합니다.
+
+[standard-version](https://www.npmjs.com/package/standard-version)은 다음과 같은 일련의 과정들을 자동화 해줍니다.
+
+1. git 의 commit 로그를 확인하여 새로운 version을 생성하고 packet.json 에 version 필드를 갱신합니다.
+2. Conventional Commits 에 해당하는 내용을 CHANGELOG.md 파일에 추가합니다.
+3. 두가지 내용을 묶어서 한번에 chore(release): 버전명(예: 1.1.2) 형태의 메시지로 커밋합니다.
+4. 버전명을 Tag로 만들어서 git에 추가합니다.
+
+완료된 형태는 다음과 같습니다.
+
+![commit-log](./_img/commit-log.png)
+
+::: warning
+Monorepo 를 사용하는 경우 lerna를 활용하여 패키지별 버저닝 및 CHAGELOG 자동화를 하기 때문에 본 내용을 적용하면 충돌이 납니다. Monorepo 에서의 버저닝 및 CHANGELOG 자동화는 [Monorepo](/guide/monorepo/)를 참고바랍니다.
+:::
+
+### 설치 및 설정
+
+패키지를 설치하고 package.json 에 스크립트를 추가합니다.
+
+```bash
+yarn add standard-version -D
+```
+
+```json
+// package.json
+{
+  ...
+  "scripts": {
+    "release": "standard-version"
+  }
+}
+```
+
+### 사용법
+
+```bash
+yarn release --first-release # 최초에 한번: CHANGELOG.md 파일을 생성함
+
+yarn release # 새로운 버전을 생성하고 CHANGELOG.md 버전 내용을 추가 및 커밋
+```
+
