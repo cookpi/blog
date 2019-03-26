@@ -38,6 +38,15 @@ yarn list
 yarn global list
 ```
 
+## yarn config set [key] [value]
+
+yarn 설정
+
+```bash
+# 모듈에서 요구하는 node 버전 에러를 무시: @google-cloud/functions-emulator 설치시 유용
+yarn config set ignore-engines true
+```
+
 ::: warning
 작성중
 :::
