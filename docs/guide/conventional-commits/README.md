@@ -1,7 +1,7 @@
 ---
 meta:
   - name: description
-    content: husky 와 commitlint를 활용하여 Conventional Commits 설정하고 CHANGELOG를 자동화하는 방법입니다.
+    content: Conventional Commits을 통해 SemVer 및 CHANGELOG를 자동화하는 방법입니다. husky 와 commitlint를 활용합니다.
   - name: keywords
     content: 쿡앱스 cookapps git conventional comit husky commitlint semver changelog 자동화
 ---
