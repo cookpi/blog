@@ -47,6 +47,17 @@ yarn 설정
 yarn config set ignore-engines true
 ```
 
+## yarn link
+
+```
+...
+```
+
+### link list 확인
+
+win: C:/Users/[name]/AppData/Local/Yarn/Data/link
+mac:
+
 ::: warning
 작성중
 :::
