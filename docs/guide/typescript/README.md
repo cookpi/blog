@@ -14,6 +14,22 @@ meta:
 작성중
 :::
 
+## 설정
+
+
+### tslint
+
+[tslint 플러그인](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin) 설치
+
+
+tsconfig 설정
+```json
+"plugins": [
+  { "name": "typescript-tslint-plugin" }
+]
+```
+
+
 autofix on save: vscode > settings(Ctrl + ,) > add text
 
 ```json
@@ -21,3 +37,6 @@ autofix on save: vscode > settings(Ctrl + ,) > add text
   "source.fixAll.tslint": true
 }
 ```
+
+### tscpaths
+
