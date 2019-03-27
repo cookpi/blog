@@ -7,6 +7,7 @@ module.exports = {
     'editorconfig/',
     'conventional-commits/',
     'monorepo/',
+    'typescript/',
     'vuepress/',
     {
       collapsable: false,
